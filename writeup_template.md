@@ -90,8 +90,6 @@ Since the model has never seen validation and test data set during the training 
 Here are six German traffic signs that I found on the web:
 <img src="augmented_dataset.png" width="480" alt="Input Image 1" />
 
-The first image might be difficult to classify because ...
-
 Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
