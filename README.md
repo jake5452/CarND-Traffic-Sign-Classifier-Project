@@ -51,7 +51,7 @@ My final model consisted of the following layers:
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 5x5x32 |
 | Dropout	 |           	|
-| Flaaten					| outputs 800x1 |
+| Flatten					| outputs 800x1 |
 | Fully connected		| outputs 120x1	|
 | RELU					|												|
 | Fully connected		| outputs 84x1	|
