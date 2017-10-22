@@ -96,16 +96,16 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Speed limit (60km/h)     		| Speed limit (60km/h)   									| 
-| Speed limit (30km/h)     			| Speed limit (30km/h) 										|
-| Priority road					| Priority road											|
-| Keep right      		| Keep right					 				|
-| Right-of-way at the next intersection			| Right-of-way at the next intersection      							|
-| Turn left ahead		| Turn left ahead    							|
-| Road work | Road work      							|
+| Speed limit (60km/h)     		| Speed limit (60km/h) | 
+| Speed limit (30km/h)     			| Speed limit (30km/h) |
+| Priority road					| Priority road |
+| Keep right      		| Keep right |
+| Right-of-way at the next intersection			| Right-of-way at the next intersection |
+| Turn left ahead		| Turn left ahead |
+| Road work | Road work |
 
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 97.6%.
 
-In terms of top k softmax probabilities, my model was able to predict each test image with very close to 100% confidence as shwon in below:
-<img src="top_k_softmax_probabilities.png" width="480" alt="Input Image 1" />
+In terms of top k softmax probabilities, my model was able to predict each test image with very close to 100% confidence as shwon in below: 
 
+<img src="top_k_softmax_probabilities.png" width="480" alt="Input Image 1" />
