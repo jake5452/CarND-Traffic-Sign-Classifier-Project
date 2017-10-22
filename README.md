@@ -7,7 +7,7 @@ In this project assignment for Udacity's Self Driving Car Nano Degree, a traffic
 **Discussion**
 --
 
-###1. Data Set Summary & Exploration
+### 1. Data Set Summary & Exploration
 
 Following is the summary of statistics on the data set:
 * The size of training set is 34799
@@ -24,10 +24,10 @@ We can clearly see that from above, the distribution is not uniform and needs to
 Here is visualizations of some samples from the dataset:
 <img src="traffic_sign_examples.png" width="480" alt="Input Image 1" />
 
-### 1. Data Preprocessing
+### 2. Data Preprocessing
 As a first step, I decided to normalize the each image by subtracting the mean and dividing by the standard deviation. The output image contained pixels that vary from 0 to 1 and normalized. This step is done to remove any high frequency noise in the data. Also this maps raw data to the normal distribution with 0 mean and 1 standard deviation.
 
-### 2. Model Architecture
+### 3. Model Architecture
 First I tried implementing LeNet to do solve the classification problem. The validation accuracy hovered around 93-95% when trained with the data augmentation. I decided to try a deeper model with more convolutional filters so that the neural network can utilize more high-level features to understand and evaluate the images. 
 
 My final model consisted of the following layers:
@@ -59,7 +59,7 @@ My final model consisted of the following layers:
 | Fully connected		| outputs 43x1 |
 | Softmax				| outputs 43x1	|
 
-#### 3. Training
+#### 4. Training
 To train the model, I used Adam optimizer with the learning rate of 0.0009. Adam optimizer provides the advantages of both adaptive gradient algorithm and root mean square propagation, which adjusts the learning rate of each parameter according to what is happening in each gradient descent step. This allows more robust training of the neural network model.
 
 Learning rate was iteratively tuned to make sure the model trains fast enough with high accuracy.
@@ -70,7 +70,7 @@ Moreover, many different batch size and number of epochs have been tried out to 
 
 Even though the number of epochs has been set to 60, it turned out anything beyond 30 epochs no significant improvements could be observed.
 
-#### 4. Improving accuracy
+#### 5. Improving accuracy
 As mentioned above, I used deeper architecture after trying out LeNet as baseline. Using iterative approach to determine number of layers and filter sizes per each convolutional layer, I settled with my current TrafficSignNet with 10 layers. Each convolutional layers has 32 filters. My reasoning behind using deeper model is to make sure the neural net has enough layers to create more complex abstraction on different features of the traffic signs.
 
 Without data augmentation my model achieved around 95% validation accuracy while achieving 99% training accuracy. Clearly, the model was underfitting. I decided that data augmentation will help me to solve the problem by making sure the network can make more generalized inferences. The data augmentation process was designed to ensure that there is even distribution in the data. It was performed by adding random geometric transformation to the images like shifting to left or right, or stretching the image. Here are some examples of images from the augmented dataset:
@@ -86,7 +86,7 @@ My final model results were:
 Since the model has never seen validation and test data set during the training and it performed well on those data set, it can be concluded that the training of the model has been successful. Larger test data set may provide more insight into the model's accuracy.
  
 
-### 5. Testing the Model on New Images
+### 6. Testing the Model on New Images
 Here are six German traffic signs that I found on the web:
 <img src="augmented_dataset.png" width="480" alt="Input Image 1" />
 
