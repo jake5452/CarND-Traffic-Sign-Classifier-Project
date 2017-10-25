@@ -110,5 +110,5 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. In terms of top k softmax probabilities, my model was able to predict each test image with very close to 100% confidence as shwon in below:
 
-<img src="top_k_softmax_probabilities.png" width="720" alt="Input Image 1" />
+<img src="top_k_softmax_probabilities.png" width="1080" alt="Input Image 1" />
 
