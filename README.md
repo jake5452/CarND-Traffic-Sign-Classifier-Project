@@ -74,7 +74,9 @@ Even though the number of epochs has been set to 60, it turned out anything beyo
 #### 5. Improving accuracy
 As mentioned above, I used deeper architecture after trying out LeNet as baseline. Using iterative approach to determine number of layers and filter sizes per each convolutional layer, I settled with my current TrafficSignNet with 10 layers. Each convolutional layers has 32 filters. My reasoning behind using deeper model is to make sure the neural net has enough layers to create more complex abstraction on different features of the traffic signs.
 
-Without data augmentation my model achieved around 95% validation accuracy while achieving 99% training accuracy. Clearly, the model was underfitting. I decided that data augmentation will help me to solve the problem by making sure the network can make more generalized inferences. The data augmentation process was designed to ensure that there is even distribution in the data. It was performed by adding random geometric transformation to the images like shifting to left or right, or stretching the image. Here are some examples of images from the augmented dataset:
+Without data augmentation my model achieved around 95% validation accuracy while achieving 99% training accuracy. Clearly, the model was underfitting. I decided that data augmentation will help me to solve the problem by making sure the network can make more generalized inferences. 
+
+The data augmentation process was designed to ensure that there is even distribution in the data. It was performed by adding random geometric transformation to the images like shifting to left or right, or stretching the image. I used ImageDataGenerator provided in Keras library to achieve this. Here are some examples of images from the augmented dataset:
 
 <img src="augmented_dataset.png" width="480" alt="Input Image 1" />
 
@@ -90,7 +92,7 @@ Since the model has never seen validation and test data set during the training 
 
 ### 6. Testing the Model on New Images
 Here are 12 German traffic signs that I found on the web. Turns out there are tons of 32x32 traffic sign images because past students worked on this project. I have decided to borrow them to save time:
-<img src="traffic_sign_examples.png" width="480" alt="Input Image 1" />
+<img src="new_images_visualization.png" width="480" alt="Input Image 1" />
 
 Here are the results of the prediction:
 
