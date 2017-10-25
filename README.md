@@ -65,7 +65,7 @@ To train the model, I used Adam optimizer with the learning rate of 0.0009. Adam
 
 Learning rate was iteratively tuned to make sure the model trains fast enough with high accuracy.
 
-I also added a dropout layer so that I can train the model with a dropout value of 50% to allow faster training and less over-fitting of the model.
+I also added two dropout layers so that I can train the model with a dropout value of 50% to allow faster training and less over-fitting of the model.
 
 Moreover, many different batch size and number of epochs have been tried out to make the training more effective. Larger batch size was favourable for training because it helps to gradient descent to converge faster and the parallel structure of GPU can be leveraged. However, too large batch size used too much GPU memory causing memory overflow. The batch size of 100 was determined to be best parameter value.
 
