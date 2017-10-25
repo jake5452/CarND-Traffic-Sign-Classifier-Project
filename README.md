@@ -25,7 +25,7 @@ Here is visualizations of some samples from the dataset:
 <img src="traffic_sign_examples.png" width="480" alt="Input Image 1" />
 
 ### 2. Data Preprocessing
-As a first step, I decided to normalize the each image by subtracting the mean and dividing by the standard deviation. The output image contained pixels that vary from 0 to 1 and normalized. This step is done to remove any high frequency noise in the data. Also this maps raw data to the normal distribution with 0 mean and 1 standard deviation.
+As a first step, I decided to normalize the each image by subtracting the mean and dividing by the standard deviation as per http://cs231n.github.io/neural-networks-2/. The output image contained pixels that vary from 0 to 1 and normalized. 
 
 ### 3. Model Architecture
 First I tried implementing LeNet to do solve the classification problem. The validation accuracy hovered around 93-95% when trained with the data augmentation. I decided to try a deeper model with more convolutional filters so that the neural network can utilize more high-level features as well as more low-level features to understand and evaluate the images. 
