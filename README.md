@@ -90,7 +90,7 @@ Since the model has never seen validation and test data set during the training 
 
 ### 6. Testing the Model on New Images
 Here are 12 German traffic signs that I found on the web. Turns out there are tons of 32x32 traffic sign images because past students worked on this project. I have decided to borrow them to save time:
-<img src="augmented_dataset.png" width="480" alt="Input Image 1" />
+<img src="traffic_sign_examples.png" width="480" alt="Input Image 1" />
 
 Here are the results of the prediction:
 
