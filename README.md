@@ -25,7 +25,7 @@ Here is visualizations of some samples from the dataset:
 <img src="traffic_sign_examples.png" width="480" alt="Input Image 1" />
 
 ### 2. Data Preprocessing
-As a first step, I decided to normalize the each image by subtracting the mean and dividing by the standard deviation as per http://cs231n.github.io/neural-networks-2/. The output image contained pixels that vary from 0 to 1 and normalized. 
+As a first step, I decided to normalize the each image by subtracting the mean and dividing by the standard deviation as per http://cs231n.github.io/neural-networks-2/. The output image contained pixels that vary from 0 to 1 and normalized. I decided to keep 3 channels hoping that the colour data will help to classify traffic signs that have similar appearances.
 
 ### 3. Model Architecture
 First I tried implementing LeNet to do solve the classification problem. The validation accuracy hovered around 93-95% when trained with the data augmentation. I decided to try a deeper model with more convolutional filters so that the neural network can utilize more high-level features as well as more low-level features to understand and evaluate the images. 
@@ -80,7 +80,7 @@ The data augmentation process was designed to ensure that there is even distribu
 
 <img src="augmented_dataset.png" width="480" alt="Input Image 1" />
 
-After augmenting the dataset, I was able to improve the accuracy of the model to around 98% validation accuracy. I tried adding a drop out layer to see if the training can be done faster and hopefully improve the validation accuracy as well. The drop out layers allow to make sure different parts of the neural networking gets trained to the dataset so that the overall architecture can converge to more accurate output (source: https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/dropout_layer.html). Random elimination of parts of the architecture also helps to combat over-fitting. The drop out layers allowed me to use faster learning rate (0.0009 vs 0.0001) but did not improve my validation accuracy unfortunately. Perhaps this was because to get even better I needed even deeper architecture or better preprocessing scheme for the dataset such as histogram equalization. I could have looked at the confusion matrix and see which data instances cause the most error.
+After augmenting the dataset, I was able to improve the accuracy of the model to around 98% validation accuracy. I tried adding a drop out layer to see if the training can be done faster and hopefully improve the validation accuracy as well. The drop out layers allow to make sure different parts of the neural networking gets trained to the dataset so that the overall architecture can converge to more accurate output (source: https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/dropout_layer.html). Random elimination of parts of the architecture also helps to combat over-fitting. The drop out layers allowed me to use faster learning rate (0.0009 vs 0.0001) but did not improve my validation accuracy unfortunately. It kept hovering around 98-99% but settling above 99%. Perhaps this was because to get even better results, I needed even deeper architecture or better preprocessing scheme for the dataset such as histogram equalization. I could have looked at the confusion matrix and see which data instances cause the most error.
 
 My final model results were:
 * training set accuracy of 99.9%
