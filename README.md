@@ -28,7 +28,7 @@ Here is visualizations of some samples from the dataset:
 As a first step, I decided to normalize the each image by subtracting the mean and dividing by the standard deviation as per http://cs231n.github.io/neural-networks-2/. The output image contained pixels that vary from 0 to 1 and normalized. I decided to keep 3 channels hoping that the colour data will help to classify traffic signs that have similar appearances.
 
 ### 3. Model Architecture
-First I tried implementing LeNet to do solve the classification problem. The validation accuracy hovered around 93-95% when trained with the data augmentation. I decided to try a deeper model with more convolutional filters so that the neural network can utilize more high-level features as well as more low-level features to understand and evaluate the images. 
+First I tried implementing LeNet to do solve the classification problem. The validation accuracy hovered around 93-95% when trained with the data augmentation. Inspired by VGG model (https://arxiv.org/pdf/1409.1556.pdf), I decided to try a deeper model with more convolutional filters that are followed by max pooling layers so that the neural network can utilize more high-level features as well as more low-level features to understand and evaluate the images. 
 
 My final model consisted of the following layers:
 
