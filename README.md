@@ -22,6 +22,7 @@ To see the distribution of the dataset, a histogram can be plotted:
 We can clearly see that from above, the distribution is not uniform and needs to be factored in for training of the neural network.
 
 Here is visualizations of some samples from the dataset:
+
 <img src="traffic_sign_examples.png" width="480" alt="Input Image 1" />
 
 ### 2. Data Preprocessing
